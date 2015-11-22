@@ -1,3 +1,3 @@
 # Mojar::Auth
 
-Tools for authentication and authorisation.
+Tools for authentication, authorisation, and tokenisation.

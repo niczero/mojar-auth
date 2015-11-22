@@ -1,5 +1,5 @@
 package Mojar::Auth;
 
-our $VERSION = 0.001;
+our $VERSION = 0.002;
 
 1;

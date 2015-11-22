@@ -3,6 +3,7 @@ use Test::More;
 
 use Cwd 'abs_path';
 use Mojar::Auth::Scuro;
+use Pod::Perldoc;
 #use open ':locale';
 
 my $s = Mojar::Auth::Scuro->new;
@@ -34,7 +35,7 @@ subtest q{Hello} => sub {
 };
 
 subtest q{Module} => sub {
-  my $p = `perldoc -l Mojolicious::Controller`;
+  my $p = Pod::Perldoc->new->searchfor(1, 'Mojolicious::Controller', @INC);
   chomp($p);
   ok $p, 'found something';
   like $p, qr[/], 'found a path';
